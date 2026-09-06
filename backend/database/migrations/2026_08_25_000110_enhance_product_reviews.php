@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration;use Illuminate\Database\Schema\Blueprint;use Illuminate\Support\Facades\Schema;
+return new class extends Migration{public function up():void{Schema::table('comments',fn(Blueprint $t)=>$t->boolean('is_staff')->default(false)->after('is_buyer'));Schema::create('comment_votes',function(Blueprint $t){$t->foreignId('comment_id')->constrained()->cascadeOnDelete();$t->foreignId('user_id')->constrained()->cascadeOnDelete();$t->timestamps();$t->primary(['comment_id','user_id']);});}public function down():void{Schema::dropIfExists('comment_votes');Schema::table('comments',fn(Blueprint $t)=>$t->dropColumn('is_staff'));}};

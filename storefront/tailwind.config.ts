@@ -1,0 +1,1 @@
+import type{Config}from'tailwindcss';export default <Partial<Config>>{theme:{extend:{colors:{brand:{50:'#f0fdfa',100:'#ccfbf1',500:'#14b8a6',600:'#0d9488',700:'#0f766e',900:'#134e4a'},clay:'#c26d3f'},fontFamily:{sans:['Vazirmatn','Tahoma','Arial','sans-serif']},boxShadow:{soft:'0 14px 40px -22px rgb(15 23 42 / .3)'}}}}

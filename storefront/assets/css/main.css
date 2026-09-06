@@ -1,0 +1,11 @@
+@import '@fontsource-variable/vazirmatn';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply font-sans antialiased; }
+  body { @apply font-sans; }
+  button, input, textarea, select { font: inherit; }
+}

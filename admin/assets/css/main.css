@@ -1,0 +1,25 @@
+@import '@fontsource-variable/vazirmatn';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Dirooz;
+  src: url('../fonts/Dirooz/Dirooz-FD.woff') format('woff');
+  src: url('../fonts/Dirooz/Dirooz-FD.eot');
+  src: url('../fonts/Dirooz/Dirooz-FD.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Dirooz/Dirooz-FD.woff2') format('woff2'),
+  url('../fonts/Dirooz/Dirooz-FD.woff') format('woff'),
+  url('../fonts/Dirooz/Dirooz-FD.ttf') format('truetype');
+}
+
+@layer base {
+  /*html { @apply font-sans antialiased; }*/
+  /*body { @apply font-sans; }*/
+  button, input, textarea, select { font: inherit; }
+}
+
+* {
+  font-family: 'Dirooz' !important;
+}

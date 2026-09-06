@@ -1,0 +1,1 @@
+<template><div class="grid min-h-screen place-items-center bg-slate-950 p-4"><div class="fixed inset-0 bg-gradient-to-br from-brand-900/80 via-slate-950 to-slate-950" /><main class="relative z-10 w-full max-w-md"><slot /></main></div></template>

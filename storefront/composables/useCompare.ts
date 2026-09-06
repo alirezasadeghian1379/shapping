@@ -1,0 +1,1 @@
+export const useCompare=()=>{const ids=useCookie<number[]>('compare_ids',{default:()=>[]});const toggle=(id:number)=>{const list=ids.value||[];ids.value=list.includes(id)?list.filter(x=>x!==id):[...list,id].slice(-4)};const has=(id:number)=>(ids.value||[]).includes(id);return{ids,toggle,has}}

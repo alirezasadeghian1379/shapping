@@ -1,0 +1,3 @@
+<?php
+namespace App\Http\Controllers\Api;use App\Http\Controllers\Controller;use App\Models\Setting;use Illuminate\Support\Facades\DB;
+class SupportController extends Controller{public function faq(){return DB::table('faqs')->where('is_active',true)->orderBy('group')->orderBy('sort_order')->get()->groupBy('group');}public function page(string $page){abort_unless(in_array($page,['about_us','contact_us'],true),404);return ['content'=>Setting::where('key',$page)->value('value'),'settings'=>Setting::where('is_public',true)->whereIn('key',['site_title','instagram','phone','email','address'])->pluck('value','key')];}}

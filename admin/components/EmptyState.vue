@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{ title: string, text: string }>()</script>
+<template><div class="grid min-h-64 place-items-center p-8 text-center"><div><div class="mx-auto mb-4 grid size-14 place-items-center rounded-2xl bg-slate-100 text-2xl">◇</div><p class="font-black text-slate-800">{{ title }}</p><p class="mx-auto mt-2 max-w-sm text-sm leading-6 text-slate-400">{{ text }}</p></div></div></template>
